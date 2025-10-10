@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@arashi/token':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@jest/types':
         specifier: 30.0.5
         version: 30.0.5
@@ -16,7 +19,7 @@ importers:
         version: 7.0.15
       '@totalpave/interfaces':
         specifier: 5.0.0
-        version: 5.0.0
+        version: 5.0.0(@arashi/token@1.0.1)
       '@types/jest':
         specifier: 30.0.0
         version: 30.0.0
@@ -53,6 +56,10 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@arashi/token@1.0.1':
+    resolution: {integrity: sha512-wrn5Pm+docfcsZokOmH+4V9VbTrDPRcsDiXuvwIX7cmm/fcG7QwrmO+YA+EAn9gIq9BtzlEbVBAeTXH15GZScA==}
+    engines: {node: '>=12.0.0'}
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -2183,6 +2190,9 @@ packages:
       '@swc/wasm':
         optional: true
 
+  tslib@2.3.1:
+    resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
+
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
@@ -2363,6 +2373,10 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
+
+  '@arashi/token@1.0.1':
+    dependencies:
+      tslib: 2.3.1
 
   '@babel/code-frame@7.27.1':
     dependencies:
@@ -2926,8 +2940,9 @@ snapshots:
       - jiti
       - supports-color
 
-  '@totalpave/interfaces@5.0.0':
+  '@totalpave/interfaces@5.0.0(@arashi/token@1.0.1)':
     dependencies:
+      '@arashi/token': 1.0.1
       '@totalpave/math': 2.3.0
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
@@ -5021,6 +5036,8 @@ snapshots:
       typescript: 5.8.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+
+  tslib@2.3.1: {}
 
   tslib@2.8.1: {}
 
