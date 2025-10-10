@@ -24,7 +24,11 @@ export class ObjectUtils {
         };
     }
 
-    public static clone(o: any): any {
+    public static clone<T = any>(input: T): T {
+        // T lacks the typings to allow us to generically just check for function existance and type check stuff. Typescript will complain a lot.
+        // So we're going to hackishly make typescript ignore that stuff but expanding the type to any. 
+        let o: any = input;
+
         // Check for pass-by-val types
         if (!o || o === true || typeof o === 'string' || typeof o === 'number') {
             return o;
@@ -35,11 +39,11 @@ export class ObjectUtils {
         }
 
         if (o instanceof Date) {
-            return new Date(o.getTime());
+            return new Date(o.getTime()) as T;
         }
 
         if (o instanceof Blob) {
-            return new Blob([o], {"type": o.type});
+            return new Blob([o], {"type": o.type}) as T;
         }
 
         let isArray: boolean = o instanceof Array;
