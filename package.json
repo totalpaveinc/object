@@ -28,20 +28,20 @@
   },
   "homepage": "https://github.com/totalpave/object#readme",
   "devDependencies": {
-    "@arashi/token": "^1.0.1",
-    "@jest/types": "30.0.5",
-    "@totalpave/eslint-plugin": "7.0.15",
-    "@totalpave/interfaces": "5.0.0",
+    "@arashi/token": "1.0.1",
+    "@jest/types": "30.2.0",
+    "@totalpave/eslint-plugin": "7.0.17",
+    "@totalpave/interfaces": "5.6.1",
     "@types/jest": "30.0.0",
-    "@types/node": "24.1.0",
+    "@types/node": "24.10.2",
     "auto-changelog": "2.5.0",
-    "jest": "30.0.5",
-    "ts-jest": "29.4.0",
+    "jest": "30.2.0",
+    "ts-jest": "29.4.6",
     "ts-node": "10.9.2",
     "tslib": "2.8.1",
-    "typedoc": "0.28.9",
-    "typedoc-plugin-markdown": "4.8.0",
-    "typescript": "5.8.3"
+    "typedoc": "0.28.15",
+    "typedoc-plugin-markdown": "4.9.0",
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@totalpave/interfaces": "^5.0.0"
