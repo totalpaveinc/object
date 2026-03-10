@@ -17,7 +17,7 @@ export class ObjectUtils {
      * @param o1 The base object
      * @param o2 The merging object
      */
-    public static merge<T1 = any, T2 = any>(o1: T1, o2: T2): Record<string, any> {
+    public static merge<T1 = any, T2 = any>(o1: T1, o2: T2): T1 & T2 {
         return {
             ...o1,
             ...o2

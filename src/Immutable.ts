@@ -2,7 +2,7 @@
 import {ObjectUtils} from './ObjectUtils';
 import {DictionaryIterator} from './DictionaryIterator';
 
-export class Immutable<T> {
+export class Immutable<T extends object> {
     private $data: T;
 
     public constructor(data: T) {

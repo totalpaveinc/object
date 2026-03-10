@@ -2,11 +2,11 @@
 import {Iterator} from './Iterator';
 import {ObjectUtils} from './ObjectUtils';
 
-export class DictionaryIterator<T = any> extends Iterator<any> {
+export class DictionaryIterator<T extends object = any> extends Iterator<any> {
     private $dict: T;
 
     constructor(data: T) {
-        super(Object.keys(ObjectUtils.clone(data)));
+        super(Object.keys(ObjectUtils.clone<T>(data)));
         this.$dict = data;
     }
 

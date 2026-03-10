@@ -57,7 +57,7 @@ describe('KeyValueAdapter', () => {
         interface ITestMap {
             test: string;
             value: string;
-            rawr: string;
+            rawr: string | null;
         }
 
         interface ITestOutMap {
@@ -69,7 +69,7 @@ describe('KeyValueAdapter', () => {
         let adapter: KeyValueAdapter<ITestMap, ITestOutMap> = new KeyValueAdapter({
             test: "hi",
             value: "world",
-            rawr: null
+            rawr: 'hi'
         });
 
         expect(adapter.adapt('test')).toBe('hi');
