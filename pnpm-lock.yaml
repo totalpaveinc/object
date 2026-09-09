@@ -1,8 +1,31 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies:
+      '@totalpave/pnpm-plugin-config':
+        specifier: 0.1.0
+        version: 0.1.0
+
+packages:
+
+  '@totalpave/pnpm-plugin-config@0.1.0':
+    resolution: {integrity: sha512-cFVaIHyT0rpefvINwMs0uJga+DKqdZY0Lko8gSCbt/3IFr8TNgEl6r87g4kuYPreKfrJRkU2SYv9xdaCI6gh5g==}
+
+snapshots:
+
+  '@totalpave/pnpm-plugin-config@0.1.0': {}
+
+---
 lockfileVersion: '9.0'
 
 settings:
-  autoInstallPeers: true
+  autoInstallPeers: false
   excludeLinksFromLockfile: false
+
+pnpmfileChecksum: sha256-czJHpTNzfpjPkAk2cV0S4FSA+joK7C7G4RMorMLkJGg=
 
 importers:
 
