@@ -10,11 +10,10 @@
     "build": "npm run lint && tsc",
     "build:release": "tsc",
     "test": "npm run lint && jest",
-    "docs": "typedoc --excludePrivate --includeVersion -readme ./README.md --out ./docs ./src/api.ts",
     "prepublishOnly": "npm run-script build",
     "changelog": "auto-changelog --output CHANGELOG.md -p --release-summary --ignore-commit-pattern chore --issue-pattern '[A-Z]+-\\d+' --issue-url https://totalpave.atlassian.net/browse/{id}",
     "preversion": "npm test",
-    "version": "NODE_ENV=production npm run-script build:release && npm run-script docs && npm run changelog && git add CHANGELOG.md docs && git commit -m 'chore: changelog'",
+    "version": "NODE_ENV=production npm run-script build:release && npm run changelog && git add CHANGELOG.md && git commit -m 'chore: changelog'",
     "postversion": "git push && git push --tags"
   },
   "repository": {
@@ -29,18 +28,16 @@
   "homepage": "https://github.com/totalpave/object#readme",
   "devDependencies": {
     "@arashi/token": "1.0.1",
-    "@jest/types": "30.4.1",
+    "@jest/types": "30.5.1",
     "@totalpave/eslint-plugin": "7.1.2",
-    "@totalpave/interfaces": "5.27.0",
+    "@totalpave/interfaces": "5.42.0",
     "@types/jest": "30.0.0",
-    "@types/node": "26.1.2",
-    "auto-changelog": "2.6.0",
-    "jest": "30.4.2",
-    "ts-jest": "29.4.12",
+    "@types/node": "26.6.5",
+    "auto-changelog": "2.7.0",
+    "jest": "30.5.2",
+    "ts-jest": "29.4.15",
     "ts-node": "10.9.2",
     "tslib": "2.8.1",
-    "typedoc": "0.28.20",
-    "typedoc-plugin-markdown": "4.12.0",
     "typescript": "5.9.3"
   },
   "peerDependencies": {
